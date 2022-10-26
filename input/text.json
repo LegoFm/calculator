@@ -1,0 +1,39 @@
+{
+  "fundsAvailable": 22256549.54,
+  "maxBuyLotCount": null,
+  "minBuyLotCount": null,
+  "tradingStatus": "available",
+  "pricePerItem": null,
+  "margin": {
+    "fundsAvailable": 22256549.54,
+    "discountLong": 0.508745,
+    "discountShort": 0,
+    "plannedPosition": 0
+  },
+  "currency": "RUB",
+  "lotSize": 1,
+  "lotDivider": 1,
+  "minStep": 0.5,
+  "faceValue": null,
+  "accruedInterest": null,
+  "isIncompleteLot": false,
+  "orderTypes": [
+    "market",
+    "limit",
+    "stop_limit",
+    "stop_loss",
+    "take_profit"
+  ],
+  "commissionInfo": {
+    "calculationCurrency": "RUB",
+    "payCurrency": "RUB",
+    "minValue": 10,
+    "valueInPercent": 0.0006,
+    "volumeToCalculationRate": 1,
+    "calculationToPayRate": 1,
+    "fundsAvailableForCommission": 22256549.54,
+    "status": "available"
+  },
+  "marketInsuranceValue": 0.03,
+  "instrumentCategoryId": null
+}
