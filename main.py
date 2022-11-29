@@ -52,7 +52,7 @@ if ( fundsAvailable / (1 + valueInPercent)) - (minValue / valueInPercent * (1 + 
 else:
     check['commission'] = 'natural'
 
- def main():
+ def main(check):
      match check:
          case {'discount': 'L', 'direction': '1', 'commission': 'percentage'}:
              (math.floor(fundsAvailable) / (price * (1 + marketInsuranceValue) * lotSize * discountLong * (1 + valueInPercent)))
@@ -62,3 +62,4 @@ else:
              (math.floor(fundsAvailable) / (price * (1 + marketInsuranceValue) * lotSize * discountShort * (1 + valueInPercent)))
          case {'discount': 'S', 'direction': '1', 'commission': 'natural'}:
              (math.floor(fundsAvailable) - minValue) / (price * (1 + marketInsuranceValue) * lotSize * discountShort)
+
