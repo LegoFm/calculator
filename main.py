@@ -17,6 +17,7 @@ def decaps(x):
 # Функция для работы со значениями в блоке margin из файла
 def decapsMargin(y):
     func = float(data["margin"][y])
+
     return func
 
 
@@ -52,14 +53,20 @@ if ( fundsAvailable / (1 + valueInPercent)) - (minValue / valueInPercent * (1 + 
 else:
     check['commission'] = 'natural'
 
- def main(check):
-     match check:
-         case {'discount': 'L', 'direction': '1', 'commission': 'percentage'}:
-             (math.floor(fundsAvailable) / (price * (1 + marketInsuranceValue) * lotSize * discountLong * (1 + valueInPercent)))
-         case {'discount': 'L', 'direction': '1', 'commission': 'natural'}:
-             (math.floor(fundsAvailable) - minValue) / (price * (1 + marketInsuranceValue) * lotSize * discountLong)
-         case {'discount': 'S', 'direction': '1', 'commission': 'percentage'}:
-             (math.floor(fundsAvailable) / (price * (1 + marketInsuranceValue) * lotSize * discountShort * (1 + valueInPercent)))
-         case {'discount': 'S', 'direction': '1', 'commission': 'natural'}:
-             (math.floor(fundsAvailable) - minValue) / (price * (1 + marketInsuranceValue) * lotSize * discountShort)
 
+
+def main(check):
+    print(check)
+    print(type(check))
+    match check:
+     case {'discount': 'L', 'direction': '1', 'commission': 'percentage'}:
+         func = (math.floor(fundsAvailable) / (price * (1 + marketInsuranceValue) * lotSize * discountLong * (1 + valueInPercent)))
+     case {'discount': 'L', 'direction': '1', 'commission': 'natural'}:
+         func = (math.floor(fundsAvailable) - minValue) / (price * (1 + marketInsuranceValue) * lotSize * discountLong)
+     case {'discount': 'S', 'direction': '1', 'commission': 'percentage'}:
+         func = (math.floor(fundsAvailable) / (price * (1 + marketInsuranceValue) * lotSize * discountShort * (1 + valueInPercent)))
+     case {'discount': 'S', 'direction': '1', 'commission': 'natural'}:
+         func = (math.floor(fundsAvailable) - minValue) / (price * (1 + marketInsuranceValue) * lotSize * discountShort)
+    return print(func)
+
+main(check)
