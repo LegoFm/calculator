@@ -1,5 +1,0 @@
-check = dict()
-#discountCheck = input(" Используем discountShort = (S) или discountLong = (L)")
-check['discount'] = input(" Используем discountShort = (S) или discountLong = (L)")
-check['direction'] = input("По направлению (1) или против направления (2)")
-print(check)
